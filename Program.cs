@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using NotificationCenter.Models;
-using NotificationService.Data;
-using NotificationService.Services;
+using NotificationCenter.Data;
+using NotificationCenter.Services;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);

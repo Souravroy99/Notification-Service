@@ -72,7 +72,7 @@ namespace NotificationCenter.Controllers
             var task = await _context.NotificationTasks.FindAsync(id);
             if (task == null) return NotFound("Task not found");
 
-            await emailService.SendEmailAsync(task.Email, task.Title, "This is your scheduled notification.");
+            await emailService.SendEmailAsync(task.Email, task.Title, task.Description);
             task.IsSent = true;
             await _context.SaveChangesAsync();
 
