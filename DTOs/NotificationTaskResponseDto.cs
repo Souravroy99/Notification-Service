@@ -1,4 +1,4 @@
-﻿namespace NotificationService.DTOs
+﻿namespace NotificationCenter.DTOs
 {
     public class NotificationTaskResponseDto {
         public int Id { get; set; }

@@ -1,13 +1,25 @@
 using Microsoft.EntityFrameworkCore;
+using NotificationCenter.Models;
 using NotificationService.Data;
+using NotificationService.Services;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Database Connection
 var connectionString = builder.Configuration.GetConnectionString("Default");
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+
+// bind EmailSettings
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddScoped<EmailService>();
+
+
+
+
+
 
 // Add services to the container.
 

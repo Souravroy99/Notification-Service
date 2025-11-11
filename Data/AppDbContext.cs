@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NotificationService.Models;
+using NotificationCenter.Models;
 
-namespace NotificationService.Data
+namespace NotificationCenter.Data
 {
     public class AppDbContext : DbContext
     {

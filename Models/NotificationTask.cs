@@ -1,4 +1,4 @@
-﻿namespace NotificationService.Models
+﻿namespace NotificationCenter.Models
 {
     public class NotificationTask
     {
