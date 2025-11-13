@@ -20,16 +20,21 @@ namespace NotificationCenter.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<ActionResult> CreateTask(NotificationTaskDto dto)
+        public async Task<ActionResult> CreateTask([FromBody] NotificationTaskDto dto)
         {
             if (dto.ScheduledTime <= DateTime.Now)
+            {
                 return BadRequest("Scheduled time must be in the future.");
+            }
+
+            Console.WriteLine($"Received Description: {dto.Description}");
 
 
             var task = new NotificationTask
             {
                 Title = dto.Title,
                 Email = dto.Email,
+                Description = dto.Description,
                 ScheduledTime = dto.ScheduledTime,
                 IsSent = false
             };
@@ -60,7 +65,9 @@ namespace NotificationCenter.Controllers
                 .ToListAsync();
 
             if (tasks.Count == 0)
+            {
                 return Ok(new { message = "No tasks found." });
+            }
 
             return Ok(tasks);
         }

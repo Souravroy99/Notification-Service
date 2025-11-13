@@ -1,6 +1,6 @@
-﻿using MailKit.Net.Smtp;
+﻿using MimeKit;
+using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
-using MimeKit;
 using NotificationCenter.Models;
 
 namespace NotificationCenter.Services

@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using NotificationCenter.Models;
 using NotificationCenter.Data;
 using NotificationCenter.Services;
-using System;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,9 +15,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // bind EmailSettings
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddScoped<EmailService>();
-
-
-
 
 
 

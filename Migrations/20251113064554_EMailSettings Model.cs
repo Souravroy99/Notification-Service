@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NotificationCenter.Migrations
 {
     /// <inheritdoc />
-    public partial class add : Migration
+    public partial class EMailSettingsModel : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

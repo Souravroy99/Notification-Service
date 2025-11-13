@@ -22,7 +22,7 @@ namespace NotificationCenter.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("NotificationService.Models.NotificationTask", b =>
+            modelBuilder.Entity("NotificationCenter.Models.NotificationTask", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

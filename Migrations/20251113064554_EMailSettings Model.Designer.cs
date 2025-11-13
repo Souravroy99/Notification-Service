@@ -12,8 +12,8 @@ using NotificationCenter.Data;
 namespace NotificationCenter.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251111163731_add")]
-    partial class add
+    [Migration("20251113064554_EMailSettings Model")]
+    partial class EMailSettingsModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace NotificationCenter.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("NotificationService.Models.NotificationTask", b =>
+            modelBuilder.Entity("NotificationCenter.Models.NotificationTask", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
